@@ -1,12 +1,4 @@
-:root {
-  --font-family : 'Inter',
-  --primary-color: #043873,
-  --secondary-color: #4F9CF9,
-  --line-height: 1.5rem,
-  --max-width: 1400px,
-}
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 body {
   width: 100%;
   padding: 0;
@@ -14,27 +6,171 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-family: "Inter";
+  font-weight: 900;
+  width: 400px;
+}
+p {
+  font-family: "inter";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.5rem;
+}
 
-h1,h2,h3,h4,h5 {
-  font-size: 27px;
-  line-height: var(--line-height);
-  font-family:'Inter';
+@media screen and (max-width: 860px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 400px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 1.3rem;
+    line-height: 3rem;
+    width: 300px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
 
-}
-p{
-  font-family: 'inter';
-}
-.content-box {
-  max-width: 1400px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
 img {
   width: 100%;
   object-fit: contain;
+  border-radius: 10px;
 }
-.img-container {
-  width: 500px;
-  height: 500px;
+
+.btn {
+  padding: 15px;
+  font-family: "inter";
+  font-size: 15px;
+  font-weight: 200;
+  color: #fff;
+  background-color: #4f9cf9;
+  border: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .btn {
+    padding: 7px;
+    font-size: 12px;
+    font-weight: 200;
+    border-radius: 7px;
+    margin-top: 1rem;
+    gap: 15px;
+  }
+}
+
+.nav-btn {
+  padding: 15px;
+  font-family: "inter";
+  font-size: 15px;
+  font-weight: 200;
+  color: #fff;
+  background-color: #4f9cf9;
+  border: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: none;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+/* HAMBURGER 1 */
+.checkbox1:checked + label > .hamburger1 > .bar1 {
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 41px;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 41px;
+}
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+@media screen and (max-width: 870px) {
+  .hamburger {
+    display: block;
+  }
 }

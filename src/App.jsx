@@ -10,6 +10,8 @@ import {
   Remote,
   Sponsors,
   Testimonies,
+  WorkTogether,
+  UseData,
 } from "./containers/index";
 
 function App() {
@@ -17,10 +19,12 @@ function App() {
     <>
       <Header />
       <Projects />
+      <WorkTogether />
       <Extention />
       <Customise />
       <Plans />
       <Remote />
+      <UseData />
       <Sponsors />
       <Apps />
       <Testimonies />

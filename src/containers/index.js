@@ -8,6 +8,8 @@ import { Testimonies } from "./Testimonies";
 import { Sponsors } from "./Sponsors";
 import { Remote } from "./Remote";
 import { Apps } from "./Apps";
+import { WorkTogether } from "./WorkTogether";
+import { UseData } from "./UseData";
 
 export {
   Plans,
@@ -20,4 +22,6 @@ export {
   Sponsors,
   Remote,
   Apps,
+  WorkTogether,
+  UseData,
 };
