@@ -22,4 +22,8 @@ export const Hero = () => {
 const Container = styled.div`
   padding-top: 8rem;
   height: 500px;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 7rem;
+  }
 `;

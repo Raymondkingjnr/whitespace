@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import { BsArrowRight } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { Sidebar } from "./Sidebar";
 
 export const NavBar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+
   const Links = [
     {
       text: "Products",
@@ -55,7 +58,10 @@ export const NavBar = () => {
           class="checkbox1 visuallyHidden"
         />
         <label for="checkbox1">
-          <div class="hamburger hamburger1">
+          <div
+            class="hamburger hamburger1"
+            onClick={() => setShowLinks(!showLinks)}
+          >
             <span class="bar bar1"></span>
             <span class="bar bar2"></span>
             <span class="bar bar3"></span>
@@ -63,6 +69,10 @@ export const NavBar = () => {
           </div>
         </label>
       </nav>
+
+      <div className={`${showLinks ? "sidebar show-sidebar" : "sidebar"}`}>
+        <Sidebar Links={Links} />
+      </div>
     </Container>
   );
 };
@@ -136,25 +146,50 @@ const Container = styled.div`
     }
   }
 
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    color: #fff;
+    transform: translate(-100%);
+    transition: all 0.3s linear;
+    padding: 35px;
+    z-index: 15;
+    display: none;
+  }
+  .show-sidebar {
+    transform: translate(0);
+  }
+
   @media screen and (max-width: 870px) {
     .nav-links {
       display: none;
     }
 
     nav {
-      padding-left: 2rem;
-      /* padding-right: 2.5rem; */
+      padding-left: 1rem;
+      padding-right: 1rem;
       /* border: 2px red solid; */
       height: 70px;
     }
   }
-  @media screen and (max-width: 600px) {
-    .nav-links {
-      display: none;
-    }
 
+  @media screen and (max-width: 400px) {
     nav {
-      padding-left: 10px;
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+      margin: 0, 20px, 0, 20px;
+    }
+  }
+  @media screen and (max-width: 330px) {
+    nav {
+      width: 50%;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
