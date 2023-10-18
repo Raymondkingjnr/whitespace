@@ -28,16 +28,16 @@ export const Article = ({
 };
 
 const ArticleContainer = styled.div`
-  max-width: 1300px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: row;
   padding-left: 1rem;
   padding-right: 1rem;
-  gap: 20px;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
   justify-content: space-between;
-  height: 600px;
+  gap: 2rem;
+  height: 550px;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
@@ -45,20 +45,32 @@ const ArticleContainer = styled.div`
 `;
 
 const TextContent = styled.div`
-  width: 600px;
-  /* padding-top: 1rem; */
+  width: 700px;
+  padding-top: 7rem;
   text-align: left;
+  gap: 0;
 
+  @media screen and (max-width: 870px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
+  }
   @media screen and (max-width: 600px) {
+    align-items: center;
     width: 100%;
+    text-align: center;
+    padding-top: 0;
   }
 `;
 
 const ImageContainer = styled.div`
   width: 500px;
   height: 500px;
+  padding-top: 5rem;
 
   @media screen and (max-width: 600px) {
     width: 100%;
+    padding-top: 3rem;
   }
 `;

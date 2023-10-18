@@ -79,17 +79,17 @@ export const NavBar = () => {
 
 const Container = styled.div`
   width: 100%;
-  margin: auto;
   position: fixed;
   background-color: #043873;
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1500px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1300px;
     margin: auto;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    /* border: red 2px solid; */
   }
 
   .logo img {
@@ -119,6 +119,8 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+    padding-left: 10rem;
+
     li {
       display: flex;
       gap: 10px;
@@ -132,12 +134,14 @@ const Container = styled.div`
   }
   .nav-links {
     display: flex;
-    gap: 20px;
+    /* gap: 20px; */
     align-items: center;
+    width: 100%;
     justify-content: space-between;
+    /* border: 2px green solid; */
     .log-ins {
-      gap: 20px;
       display: flex;
+      gap: 20px;
       .log-btn {
         background-color: #ffe492;
         color: #000;
@@ -148,15 +152,17 @@ const Container = styled.div`
 
   .sidebar {
     width: 100%;
-    height: 100%;
-    background: #000;
-    top: 0%;
+    height: auto !important;
+    background-color: #043873;
+    top: 7%;
     left: 0%;
     position: fixed;
     color: #fff;
+
     transform: translate(-100%);
     transition: all 0.3s linear;
-    padding: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     z-index: 15;
     display: none;
   }
@@ -169,6 +175,9 @@ const Container = styled.div`
       display: none;
     }
 
+    .sidebar {
+      display: block;
+    }
     nav {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -179,17 +188,15 @@ const Container = styled.div`
 
   @media screen and (max-width: 400px) {
     nav {
-      width: 60%;
-      justify-content: center;
       align-items: center;
       margin: 0, 20px, 0, 20px;
     }
   }
-  @media screen and (max-width: 330px) {
+  /* @media screen and (max-width: 330px) {
     nav {
       width: 50%;
       justify-content: center;
       align-items: center;
     }
-  }
+  } */
 `;

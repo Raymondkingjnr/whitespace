@@ -23,11 +23,11 @@ const Container = styled.div`
   margin-top: 7rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  height: 350px;
+  height: 450px;
   background-color: #043873;
 
   @media screen and (max-width: 600px) {
-    height: 500px;
+    height: 550px;
     padding-top: 0;
   }
 `;

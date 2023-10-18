@@ -20,8 +20,9 @@ export const Apps = () => {
 };
 
 const Container = styled.div`
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin-top: 7rem;
+  padding-bottom: 2rem;
   height: 500px;
   background-color: #043873;
 

@@ -6,20 +6,20 @@ import styled from "styled-components";
 export const Sidebar = ({ Links }) => {
   return (
     <Section>
-      <div className="nav-links">
-        <ul className="links">
+      <div className="sidebar-nav-links">
+        <ul className="sidebar-links">
           {Links.map((link, index) => {
             return (
               <li key={index}>
                 {link.text}
-                <span style={{ marginTop: "0.3rem" }}>
+                {/* <span style={{ marginTop: "0.3rem" }}>
                   <RiArrowDropDownLine style={{ fontSize: "2rem" }} />
-                </span>
+                </span> */}
               </li>
             );
           })}
         </ul>
-        <div className="log-ins">
+        <div className="sidebar-login">
           <button className=" nav-btn log-btn">Login</button>
           <button className="nav-btn">
             Try Whitespace Free <BsArrowRight style={{ fontSize: "1.2rem" }} />{" "}
@@ -30,4 +30,24 @@ export const Sidebar = ({ Links }) => {
   );
 };
 
-const Section = styled.div``;
+const Section = styled.div`
+  .sidebar-links {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    flex-direction: column;
+    gap: 30px;
+  }
+  .sidebar-links li {
+    padding-top: 2rem;
+  }
+  .sidebar-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+`;
