@@ -27,6 +27,9 @@ const Container = styled.div`
   background-color: #043873;
 
   @media screen and (max-width: 600px) {
-    height: 650px;
+    height: 750px;
+  }
+  @media screen and (max-width: 430px) {
+    height: 680px;
   }
 `;

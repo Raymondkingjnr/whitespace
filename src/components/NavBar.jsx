@@ -163,7 +163,7 @@ const Container = styled.div`
     transition: all 0.3s linear;
     padding-top: 35px;
     padding-bottom: 35px;
-    z-index: 15;
+    z-index: 100;
     display: none;
   }
   .show-sidebar {

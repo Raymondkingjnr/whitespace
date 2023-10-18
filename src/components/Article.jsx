@@ -37,7 +37,7 @@ const ArticleContainer = styled.div`
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
   justify-content: space-between;
   gap: 2rem;
-  height: 550px;
+  // height: 550px;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
