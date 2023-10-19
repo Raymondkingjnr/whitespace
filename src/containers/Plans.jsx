@@ -152,7 +152,7 @@ const Container = styled.div`
     border: none;
   }
   .plan:hover .plans-btn {
-    background-color: #a7cefc;
+    background-color: #74b5ff;
     color: #fff;
     border: transparent;
   }
