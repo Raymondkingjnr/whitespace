@@ -13,8 +13,9 @@ export const Testimonies = () => {
 
 const Container = styled.div`
   margin-bottom: 5rem;
-  background: #000;
-  h1 {
+  border: 2px red solid;
+  h1,
+  p {
     color: #000;
   }
 `;
